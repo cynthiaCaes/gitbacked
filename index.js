@@ -13,6 +13,14 @@ app.get('/', (peticion, respuesta) => {
 
 })
 
+app.get('/main', (peticion, respuesta) => {
+
+    respuesta.send('<h1 style="color:red;">Bienvenido a la aplicacion de Ecommerce</h1>');
+    console.log('Cambiamos el texto a rojo y le agregamos un H1');
+    console.log(process.env);
+
+})
+
 app.listen(PORT, (err) => {
     if(err) throw err;
 
